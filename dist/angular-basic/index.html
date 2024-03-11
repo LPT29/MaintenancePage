@@ -68,10 +68,13 @@
     });
 
  setTimeout(function refresh() {
-        if(new Date().getTime() - time >= 60000) 
+        if(new Date().getTime() - time >= 60000) {
+            var url = window.location.href;
+            window.location.href = url;
             window.location.reload(true);
-        else 
-            setTimeout(refresh, 10000);
+        }
+        else{ 
+            setTimeout(refresh, 10000);}
     }, 10000);
 </script>
 </body></html>
