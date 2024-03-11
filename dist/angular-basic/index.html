@@ -58,6 +58,19 @@
         </div>
     </section>
     <!-- End Under Construction -->
+    <script>
+        var time = new Date().getTime();
+        $(document.body).bind("mousemove keypress", function(e) {
+            time = new Date().getTime();
+        });
+    
+     setTimeout(function refresh() {
+            if(new Date().getTime() - time >= 60000) 
+                window.location.reload(true);
+            else 
+                setTimeout(refresh, 10000);
+        }, 10000);
+    </script>
 <script src="runtime.f6071096bffe76cd.js" type="module"></script><script src="polyfills.d74607a173d2d8b5.js" type="module"></script><script src="main.ff067d77d66610ad.js" type="module"></script>
 
 </body></html>
